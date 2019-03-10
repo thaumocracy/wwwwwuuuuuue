@@ -6,14 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Hello Vue</title>
 </head>
-<body>
+<body> 
     <div id="app">
+        <template>
+            <p v-for="item in array">{{item}}</p>
+        </template>
+        <button @click="array.push('newItem')">Add a new item</button>
         <input type="text" @input="changeInput">
         <h1>The product is {{ product }}</h1>
         <p>{{ description }}</p>
+        <p v-model="array">{{array}}</p>
         <button 
-        @mouseenter="makeRed"
-        @mouseleave="makeNormal"
+            @mouseenter="makeRed"
+            @mouseleave="makeNormal"
         >Button</button>
         <a :href="link">Ze roogle</a>
     </div>

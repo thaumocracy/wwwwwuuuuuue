@@ -3,7 +3,8 @@ new Vue ({
     data: {
         product:'Socks',
         description:"Very socky socks",
-        link:"http://google.com"
+        link:"http://google.com",
+        array: [],
     },
     methods : {
         changeInput : function (event) {
